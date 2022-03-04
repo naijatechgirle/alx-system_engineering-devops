@@ -1,2 +1,2 @@
 #!/bin/bash
-sudo chown --reference=school hello
+sudo chown --reference=hello school
