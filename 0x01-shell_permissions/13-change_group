@@ -1,2 +1,2 @@
 #!/bin/bash
-sudo chown --reference=hello school
+chgrp school hello
