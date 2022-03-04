@@ -1,1 +1,1 @@
-Solution to task 0
+Solutions to task 0
