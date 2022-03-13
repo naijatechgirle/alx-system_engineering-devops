@@ -1,2 +1,2 @@
 #!/bin/bash
-alias ls="rm *"
+echo $(($(echo $PATH | grep -o ":" | wc -l) + 1)
