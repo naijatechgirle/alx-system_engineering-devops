@@ -1,2 +1,3 @@
 #!/bin/bash
-ls -alh /boot | grep ^-
+ls -alh /path/to/0x00-shell_basics/boot
+
