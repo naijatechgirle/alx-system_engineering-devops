@@ -1,0 +1,2 @@
+#!/bin/bash
+set -o posix set | grep '^\([[:alnum:]_]\|-\)*=' | cut -d '=' -f 1 printenv | cut -d '=' -f 1 declare -F | cut -d ' ' -f 3
