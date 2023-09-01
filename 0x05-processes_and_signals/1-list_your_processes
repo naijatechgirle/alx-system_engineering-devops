@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
-# script that gets the PID of your Bash process.
+# script that gets the list of your Bash running processes.
 ps -auxf
