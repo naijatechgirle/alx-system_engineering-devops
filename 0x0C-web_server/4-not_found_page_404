@@ -1,13 +1,13 @@
 #!/usr/bin/env bash
-# so that /redirect_me is redirecting to another page.
+# Page not found 404
 
 apt-get update
 apt-get -y install nginx
 ufw allow 'Nginx HTTP'
 chmod -R 755 /var/www
+echo "Hello World" > /var/www/html/index.html
 
 echo "Ceci n'est pas une page" > /var/www/html/404.html
-echo "Hello World" > /var/www/html/index.html
 echo "server {
         listen 80 default_server;
         listen [::]:80 default_server;
@@ -19,6 +19,10 @@ echo "server {
                 # First attempt to serve request as file, then
                 # as directory, then fall back to displaying a 404.
                 try_files \$uri \$uri/ =404;
+        }
+	error_page 404 /404.html;
+        location  /404.html {
+            internal;
         }
 
         if (\$request_filename ~ redirect_me){
